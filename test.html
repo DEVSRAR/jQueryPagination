@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="pagination.css">
+  <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="jquery.pagination.js"></script>
+  <script>
+    function pageselectCallback(page_index, jq) {
+      // alert(page_index);
+      return false;
+    }
+    $(document).ready(function () {
+      $(".pagination").pagination(100, {
+        callback: pageselectCallback,
+        num_edge_entries: 1,
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <div class="pagination">
+
+  </div>
+</body>
+
+</html>
